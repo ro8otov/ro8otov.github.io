@@ -40,6 +40,12 @@ gdjs.ConnectCode.GDErrorTextObjects3= [];
 gdjs.ConnectCode.GDidbackgroundObjects1= [];
 gdjs.ConnectCode.GDidbackgroundObjects2= [];
 gdjs.ConnectCode.GDidbackgroundObjects3= [];
+gdjs.ConnectCode.GDSingleObjects1= [];
+gdjs.ConnectCode.GDSingleObjects2= [];
+gdjs.ConnectCode.GDSingleObjects3= [];
+gdjs.ConnectCode.GDSingleTextObjects1= [];
+gdjs.ConnectCode.GDSingleTextObjects2= [];
+gdjs.ConnectCode.GDSingleTextObjects3= [];
 
 gdjs.ConnectCode.conditionTrue_0 = {val:false};
 gdjs.ConnectCode.condition0IsTrue_0 = {val:false};
@@ -122,7 +128,7 @@ gdjs.ConnectCode.condition0IsTrue_0.val = gdjs.evtTools.p2p.isReady();
 }if ( gdjs.ConnectCode.condition0IsTrue_0.val ) {
 {
 {gdjs.ConnectCode.conditionTrue_1 = gdjs.ConnectCode.condition1IsTrue_0;
-gdjs.ConnectCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(8446044);
+gdjs.ConnectCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(8465884);
 }
 }}
 if (gdjs.ConnectCode.condition1IsTrue_0.val) {
@@ -145,7 +151,7 @@ gdjs.ConnectCode.condition0IsTrue_0.val = !(gdjs.evtTools.p2p.isReady());
 }if ( gdjs.ConnectCode.condition0IsTrue_0.val ) {
 {
 {gdjs.ConnectCode.conditionTrue_1 = gdjs.ConnectCode.condition1IsTrue_0;
-gdjs.ConnectCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(8521188);
+gdjs.ConnectCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(8466732);
 }
 }}
 if (gdjs.ConnectCode.condition1IsTrue_0.val) {
@@ -210,7 +216,7 @@ gdjs.copyArray(gdjs.ConnectCode.GDConnectButtonObjects1_1final, gdjs.ConnectCode
 }if ( gdjs.ConnectCode.condition0IsTrue_0.val ) {
 {
 {gdjs.ConnectCode.conditionTrue_1 = gdjs.ConnectCode.condition1IsTrue_0;
-gdjs.ConnectCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(8523796);
+gdjs.ConnectCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(8468372);
 }
 }}
 if (gdjs.ConnectCode.condition1IsTrue_0.val) {
@@ -264,17 +270,17 @@ gdjs.ConnectCode.condition0IsTrue_0.val = gdjs.evtTools.p2p.onEvent("connected",
 }
 
 
-};gdjs.ConnectCode.mapOfGDgdjs_46ConnectCode_46GDCopyObjects2Objects = Hashtable.newFrom({"Copy": gdjs.ConnectCode.GDCopyObjects2});gdjs.ConnectCode.mapOfGDgdjs_46ConnectCode_46GDPasteObjects1Objects = Hashtable.newFrom({"Paste": gdjs.ConnectCode.GDPasteObjects1});gdjs.ConnectCode.eventsList2 = function(runtimeScene) {
+};gdjs.ConnectCode.mapOfGDgdjs_46ConnectCode_46GDSingleObjects2Objects = Hashtable.newFrom({"Single": gdjs.ConnectCode.GDSingleObjects2});gdjs.ConnectCode.mapOfGDgdjs_46ConnectCode_46GDPasteObjects2Objects = Hashtable.newFrom({"Paste": gdjs.ConnectCode.GDPasteObjects2});gdjs.ConnectCode.mapOfGDgdjs_46ConnectCode_46GDCopyObjects1Objects = Hashtable.newFrom({"Copy": gdjs.ConnectCode.GDCopyObjects1});gdjs.ConnectCode.eventsList2 = function(runtimeScene) {
 
 {
 
-gdjs.copyArray(runtimeScene.getObjects("Copy"), gdjs.ConnectCode.GDCopyObjects2);
+gdjs.copyArray(runtimeScene.getObjects("Single"), gdjs.ConnectCode.GDSingleObjects2);
 
 gdjs.ConnectCode.condition0IsTrue_0.val = false;
 {
-gdjs.ConnectCode.condition0IsTrue_0.val = gdjs.evtTools.input.cursorOnObject(gdjs.ConnectCode.mapOfGDgdjs_46ConnectCode_46GDCopyObjects2Objects, runtimeScene, true, false);
+gdjs.ConnectCode.condition0IsTrue_0.val = gdjs.evtTools.input.cursorOnObject(gdjs.ConnectCode.mapOfGDgdjs_46ConnectCode_46GDSingleObjects2Objects, runtimeScene, true, false);
 }if (gdjs.ConnectCode.condition0IsTrue_0.val) {
-{gdjs.evtsExt__Clipboard__WriteText.func(runtimeScene, gdjs.evtTools.p2p.getCurrentId(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Main game", false);
 }}
 
 }
@@ -282,16 +288,30 @@ gdjs.ConnectCode.condition0IsTrue_0.val = gdjs.evtTools.input.cursorOnObject(gdj
 
 {
 
-gdjs.copyArray(runtimeScene.getObjects("Paste"), gdjs.ConnectCode.GDPasteObjects1);
+gdjs.copyArray(runtimeScene.getObjects("Paste"), gdjs.ConnectCode.GDPasteObjects2);
 
 gdjs.ConnectCode.condition0IsTrue_0.val = false;
 {
-gdjs.ConnectCode.condition0IsTrue_0.val = gdjs.evtTools.input.cursorOnObject(gdjs.ConnectCode.mapOfGDgdjs_46ConnectCode_46GDPasteObjects1Objects, runtimeScene, true, false);
+gdjs.ConnectCode.condition0IsTrue_0.val = gdjs.evtTools.input.cursorOnObject(gdjs.ConnectCode.mapOfGDgdjs_46ConnectCode_46GDPasteObjects2Objects, runtimeScene, true, false);
 }if (gdjs.ConnectCode.condition0IsTrue_0.val) {
-gdjs.copyArray(runtimeScene.getObjects("idEntry"), gdjs.ConnectCode.GDidEntryObjects1);
-{for(var i = 0, len = gdjs.ConnectCode.GDidEntryObjects1.length ;i < len;++i) {
-    gdjs.ConnectCode.GDidEntryObjects1[i].setString(gdjs.ConnectCode.GDidEntryObjects1[i].getString() + (gdjs.evtsExt__Clipboard__ReadText.func(runtimeScene, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined))));
+gdjs.copyArray(runtimeScene.getObjects("idEntry"), gdjs.ConnectCode.GDidEntryObjects2);
+{for(var i = 0, len = gdjs.ConnectCode.GDidEntryObjects2.length ;i < len;++i) {
+    gdjs.ConnectCode.GDidEntryObjects2[i].setString(gdjs.ConnectCode.GDidEntryObjects2[i].getString() + (gdjs.evtsExt__Clipboard__ReadText.func(runtimeScene, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined))));
 }
+}}
+
+}
+
+
+{
+
+gdjs.copyArray(runtimeScene.getObjects("Copy"), gdjs.ConnectCode.GDCopyObjects1);
+
+gdjs.ConnectCode.condition0IsTrue_0.val = false;
+{
+gdjs.ConnectCode.condition0IsTrue_0.val = gdjs.evtTools.input.cursorOnObject(gdjs.ConnectCode.mapOfGDgdjs_46ConnectCode_46GDCopyObjects1Objects, runtimeScene, true, false);
+}if (gdjs.ConnectCode.condition0IsTrue_0.val) {
+{gdjs.evtsExt__Clipboard__WriteText.func(runtimeScene, gdjs.evtTools.p2p.getCurrentId(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }}
 
 }
@@ -309,7 +329,7 @@ gdjs.ConnectCode.condition0IsTrue_0.val = gdjs.evtTools.input.isMouseButtonPress
 }if ( gdjs.ConnectCode.condition0IsTrue_0.val ) {
 {
 {gdjs.ConnectCode.conditionTrue_1 = gdjs.ConnectCode.condition1IsTrue_0;
-gdjs.ConnectCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(8527172);
+gdjs.ConnectCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(8472460);
 }
 }}
 if (gdjs.ConnectCode.condition1IsTrue_0.val) {
@@ -447,6 +467,12 @@ gdjs.ConnectCode.GDErrorTextObjects3.length = 0;
 gdjs.ConnectCode.GDidbackgroundObjects1.length = 0;
 gdjs.ConnectCode.GDidbackgroundObjects2.length = 0;
 gdjs.ConnectCode.GDidbackgroundObjects3.length = 0;
+gdjs.ConnectCode.GDSingleObjects1.length = 0;
+gdjs.ConnectCode.GDSingleObjects2.length = 0;
+gdjs.ConnectCode.GDSingleObjects3.length = 0;
+gdjs.ConnectCode.GDSingleTextObjects1.length = 0;
+gdjs.ConnectCode.GDSingleTextObjects2.length = 0;
+gdjs.ConnectCode.GDSingleTextObjects3.length = 0;
 
 gdjs.ConnectCode.eventsList5(runtimeScene);
 return;
