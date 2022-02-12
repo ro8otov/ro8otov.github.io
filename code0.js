@@ -40,6 +40,9 @@ gdjs.ConnectCode.GDSingleObjects3= [];
 gdjs.ConnectCode.GDSingleTextObjects1= [];
 gdjs.ConnectCode.GDSingleTextObjects2= [];
 gdjs.ConnectCode.GDSingleTextObjects3= [];
+gdjs.ConnectCode.GDbucketObjects1= [];
+gdjs.ConnectCode.GDbucketObjects2= [];
+gdjs.ConnectCode.GDbucketObjects3= [];
 
 gdjs.ConnectCode.conditionTrue_0 = {val:false};
 gdjs.ConnectCode.condition0IsTrue_0 = {val:false};
@@ -290,7 +293,7 @@ gdjs.ConnectCode.condition0IsTrue_0.val = gdjs.evtTools.input.cursorOnObject(gdj
 }if (gdjs.ConnectCode.condition0IsTrue_0.val) {
 gdjs.copyArray(runtimeScene.getObjects("idEntry"), gdjs.ConnectCode.GDidEntryObjects2);
 {for(var i = 0, len = gdjs.ConnectCode.GDidEntryObjects2.length ;i < len;++i) {
-    gdjs.ConnectCode.GDidEntryObjects2[i].setString(gdjs.ConnectCode.GDidEntryObjects2[i].getString() + (gdjs.evtsExt__Clipboard__ReadText.func(runtimeScene, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined))));
+    gdjs.ConnectCode.GDidEntryObjects2[i].setString(gdjs.evtsExt__Clipboard__ReadText.func(runtimeScene, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)));
 }
 }}
 
@@ -306,7 +309,6 @@ gdjs.ConnectCode.condition0IsTrue_0.val = false;
 gdjs.ConnectCode.condition0IsTrue_0.val = gdjs.evtTools.input.cursorOnObject(gdjs.ConnectCode.mapOfGDgdjs_46ConnectCode_46GDCopyObjects1Objects, runtimeScene, true, false);
 }if (gdjs.ConnectCode.condition0IsTrue_0.val) {
 {gdjs.evtsExt__Clipboard__WriteText.func(runtimeScene, gdjs.evtTools.p2p.getCurrentId(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{gdjs.evtsExt__Clipboard__ReadTextCrossPlaform.func(runtimeScene, gdjs.evtsExt__Clipboard__ReadText.func(runtimeScene, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }}
 
 }
@@ -462,6 +464,9 @@ gdjs.ConnectCode.GDSingleObjects3.length = 0;
 gdjs.ConnectCode.GDSingleTextObjects1.length = 0;
 gdjs.ConnectCode.GDSingleTextObjects2.length = 0;
 gdjs.ConnectCode.GDSingleTextObjects3.length = 0;
+gdjs.ConnectCode.GDbucketObjects1.length = 0;
+gdjs.ConnectCode.GDbucketObjects2.length = 0;
+gdjs.ConnectCode.GDbucketObjects3.length = 0;
 
 gdjs.ConnectCode.eventsList5(runtimeScene);
 return;
